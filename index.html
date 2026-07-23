@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShaCole Group Inc.</title>
+<meta name="description" content="ShaCole Group Inc. — the company behind Wealth Within Reach® and TurnQi™ Ready.">
+<style>
+  :root{ --navy:#0D1321; --gold:#C89B3C; --ink:#1b2230; --muted:#5b6472; --paper:#FFFAFA; --line:#e7e3da; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+  header{padding:64px 0 8px;text-align:center}
+  .mark{font:700 30px/1 Georgia,"Times New Roman",serif;letter-spacing:.5px;color:var(--navy)}
+  .mark span{color:var(--gold)}
+  .tag{color:var(--muted);margin-top:14px;font-size:16px}
+  main{padding:40px 0 24px}
+  .brands{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 36px}
+  .card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
+  .card h3{margin:0 0 6px;font-size:18px;color:var(--navy)}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  @media(max-width:560px){.brands{grid-template-columns:1fr}}
+  h2{font-size:14px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:34px 0 12px}
+  .links{display:flex;flex-wrap:wrap;gap:10px 22px}
+  .links a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px}
+  .links a:hover{color:var(--gold)}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">ShaCole<span>&reg;</span> Group Inc.</div>
+    <p class="tag">A private company operating client-focused brands.</p>
+  </header>
+  <main>
+    <div class="brands">
+      <div class="card">
+        <h3>Wealth Within Reach&reg;</h3>
+        <p>Clarity-first financial guidance that helps people understand where they stand and what to do next.</p>
+      </div>
+      <div class="card">
+        <h3>TurnQi&trade; Ready</h3>
+        <p>Space preparation and turnover services that get homes and light commercial spaces ready for their next use.</p>
+      </div>
+    </div>
+
+    <h2>Legal &amp; Support</h2>
+    <div class="links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/support">Support</a>
+      <a href="/help">Help</a>
+    </div>
+  </main>
+  <footer>
+    &copy; <span id="y"></span> ShaCole Group Inc. &middot; <a href="mailto:support@shacole.com">support@shacole.com</a>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

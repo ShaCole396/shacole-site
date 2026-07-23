@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administrator Guide — ShaCole® App</title>
+<meta name="description" content="Administrator guide for managing the ShaCole® application in Google Workspace.">
+<style>
+  :root{ --navy:#0D1321; --gold:#C89B3C; --ink:#1b2230; --muted:#5b6472; --paper:#FFFAFA; --line:#e7e3da; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  header{padding:44px 0 8px}
+  .mark{font:700 22px/1 Georgia,"Times New Roman",serif;color:var(--navy)}
+  .mark span{color:var(--gold)}
+  .mark a{color:inherit;text-decoration:none}
+  h1{font-size:30px;color:var(--navy);margin:26px 0 4px}
+  .sub{color:var(--muted);font-size:15px;margin:0 0 26px}
+  h2{font-size:19px;color:var(--navy);margin:34px 0 8px}
+  a{color:var(--navy);border-bottom:1px solid var(--gold);text-decoration:none}
+  a:hover{color:var(--gold)}
+  ol,ul{padding-left:20px}
+  li{margin:8px 0}
+  .note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 16px;color:var(--muted);font-size:14px;margin:22px 0}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 60px;color:var(--muted);font-size:13px}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="mark"><a href="/">ShaCole<span>&reg;</span> Group Inc.</a></div></header>
+
+  <h1>Administrator Guide</h1>
+  <p class="sub">Managing ShaCole&reg; for ShaCole Group Inc.</p>
+
+  <div class="note">ShaCole&reg; is a <strong>private</strong> Google Workspace application, available only within ShaCole Group Inc. It is not offered to the public and cannot be installed by users outside the organization.</div>
+
+  <h2>Installing the app for your team</h2>
+  <p>A ShaCole Group Workspace administrator manages availability from the <strong>Google Admin console</strong>:</p>
+  <ol>
+    <li>Go to <strong>Apps &rarr; Google Workspace Marketplace apps</strong>.</li>
+    <li>Locate <strong>ShaCole&reg;</strong> and choose who can install it &mdash; the whole organization, or specific organizational units or groups.</li>
+    <li>Team members can then add ShaCole&reg; in Google Chat and authorize it for their own account.</li>
+  </ol>
+
+  <h2>Access &amp; scopes</h2>
+  <p>The app requests only the Google Workspace scopes it needs to function (Sheets, Gmail, Calendar, Contacts, Drive, Tasks, and Chat). See the <a href="/privacy">Privacy Policy</a> for details. Each user authorizes the app once for their own account.</p>
+
+  <h2>Revoking access</h2>
+  <p>Administrators can remove or restrict the app at any time from the Admin console, and individual users can be removed from the allowed audience. Removing the app immediately ends its access to Workspace data.</p>
+
+  <h2>Questions</h2>
+  <p>Administrator questions: <a href="mailto:support@shacole.com">support@shacole.com</a>.</p>
+
+  <footer>&copy; <span id="y"></span> ShaCole Group Inc. &middot; <a href="/support">Support</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></footer>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

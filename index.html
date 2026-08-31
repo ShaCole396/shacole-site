@@ -1,63 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShaCole Group Inc.</title>
-<meta name="description" content="ShaCole Group Inc. — the company behind Wealth Within Reach® and TurnQi™ Ready.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShaCole&reg; Group Inc.</title>
+<meta name="description" content="ShaCole Group Inc. — the private company behind Wealth Within Reach® and TurnQi™ Ready.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ShaCole® Group Inc.">
+<meta property="og:description" content="The company behind Wealth Within Reach® and TurnQi™ Ready.">
+<link rel="icon" type="image/png" href="/favicon-shacole.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 <style>
-  :root{ --navy:#0D1321; --gold:#C89B3C; --ink:#1b2230; --muted:#5b6472; --paper:#FFFAFA; --line:#e7e3da; }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
-  header{padding:64px 0 8px;text-align:center}
-  .mark{font:700 30px/1 Georgia,"Times New Roman",serif;letter-spacing:.5px;color:var(--navy)}
-  .mark span{color:var(--gold);font-size:.5em;vertical-align:.55em;font-weight:700}
-  .tag{color:var(--muted);margin-top:14px;font-size:16px}
-  main{padding:40px 0 24px}
-  .brands{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 36px}
-  .card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
-  .card h3{margin:0 0 6px;font-size:18px;color:var(--navy)}
-  .card p{margin:0;color:var(--muted);font-size:15px}
-  @media(max-width:560px){.brands{grid-template-columns:1fr}}
-  h2{font-size:14px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:34px 0 12px}
-  .links{display:flex;flex-wrap:wrap;gap:10px 22px}
-  .links a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px}
-  .links a:hover{color:var(--gold)}
-  footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 60px;color:var(--muted);font-size:13px;text-align:center}
-  footer a{color:var(--muted)}
+  :root{
+    --navy:#0D1321;
+    --navy-deep:#080b13;
+    --ink:#1b2230;
+    --gold:#C89B3C;
+    --gold-soft:#e8d9b8;
+    --paper:#FFFAFA;
+    --mist:#f5f2ea;
+    --white:#ffffff;
+    --line:#e7e3da;
+    --muted:#5b6472;
+    --body-grey:#5b6472;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',Georgia,"Times New Roman",serif;line-height:1.18;color:var(--navy)}
+  .tm{font-size:.55em;vertical-align:top;position:relative;top:-.1em;letter-spacing:0}
+  img,svg{display:block}
+  a{color:inherit}
+
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;background:rgba(255,250,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+  .nav .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .nav .logo img{height:32px;width:32px}
+  .mark{font-family:'Fraunces',Georgia,"Times New Roman",serif;font-weight:600;font-size:1.28rem;letter-spacing:.3px;color:var(--navy);line-height:1}
+  .mark .reg{color:var(--gold);font-size:.5em;vertical-align:.55em;font-weight:700}
+  .nav-links{display:flex;align-items:center;gap:22px}
+  .nav-links a{text-decoration:none;font-size:.9rem;font-weight:600;color:var(--navy)}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;padding:10px 18px;border-radius:8px;transition:background .2s}
+  .nav-cta:hover{background:var(--navy-deep);color:#fff}
+
+  /* ---------- hero ---------- */
+  .hero{padding:76px 0 60px;background:
+    radial-gradient(1100px 480px at 85% -10%, rgba(200,155,60,.12), transparent 60%),
+    linear-gradient(180deg,var(--paper) 0%, #fffdfb 100%)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
+  .hero h1{font-size:clamp(2.1rem,5.4vw,3.3rem);font-weight:600;max-width:18ch}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p.lede{margin:22px 0 8px;font-size:1.12rem;color:var(--body-grey);max-width:58ch}
+  .hero .markets{margin:24px 0 30px;display:flex;flex-wrap:wrap;gap:10px}
+  .markets span{font-size:.82rem;font-weight:600;color:var(--navy);background:var(--white);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:9px;font-size:1rem;cursor:pointer}
+  .btn-gold{background:var(--gold);color:var(--navy);border:2px solid var(--gold)}
+  .btn-gold:hover{filter:brightness(1.05)}
+  .btn-ghost{border:2px solid var(--navy);color:var(--navy);background:transparent}
+  .btn-ghost:hover{background:var(--navy);color:#fff}
+
+  /* signet divider */
+  .keyline{display:flex;justify-content:center;padding:14px 0 6px}
+  .keyline img{height:42px;width:42px;opacity:.95}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0;scroll-margin-top:74px}
+  .sec-head{max-width:640px;margin-bottom:36px}
+  .sec-head h2{font-size:clamp(1.6rem,3.4vw,2.15rem);font-weight:600}
+  .sec-head p{margin-top:12px;color:var(--body-grey)}
+  .tinted{background:var(--mist)}
+
+  /* brand / niche band */
+  .niche{background:var(--navy);color:#fff}
+  .niche .eyebrow{color:var(--gold)}
+  .niche h2{color:#fff;font-size:clamp(1.6rem,3.6vw,2.25rem);max-width:20ch}
+  .niche p{color:#cdd3dd;margin-top:16px;max-width:64ch;font-size:1.05rem}
+  .niche p b{color:var(--gold-soft)}
+
+  /* cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .15s, box-shadow .15s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(13,19,33,.07)}
+  .card h3{font-size:1.12rem;font-weight:600;margin-bottom:8px}
+  .card p{font-size:.94rem;color:var(--body-grey)}
+  .card .tick{width:32px;height:32px;border-radius:9px;background:rgba(200,155,60,.16);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--gold);font-weight:800;font-size:1.05rem}
+
+  /* link grid */
+  .linkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .linkgrid a{display:block;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;color:var(--navy);font-weight:600;transition:border-color .15s, transform .15s}
+  .linkgrid a:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .linkgrid a span{display:block;margin-top:4px;font-weight:400;font-size:.86rem;color:var(--muted)}
+
+  /* footer */
+  footer{background:var(--navy);color:#aeb6c2;padding:56px 0 72px;margin-top:20px}
+  .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px;align-items:flex-start}
+  .foot-lockup{display:flex;align-items:center;gap:11px}
+  .foot-lockup img{height:34px;width:34px}
+  .foot-mark{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.3rem;color:#fff;line-height:1}
+  .foot-mark .reg{color:var(--gold);font-size:.5em;vertical-align:.55em;font-weight:700}
+  .foot-tag{font-size:.9rem;max-width:34ch;color:#c3cad4}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:22px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:.82rem}
+  .foot-bottom a{text-decoration:none;opacity:.9}
+  .foot-bottom a:hover{opacity:1;color:var(--gold-soft)}
+  .foot-links{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center}
+
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .foot-top{flex-direction:column}
+  }
+  @media (max-width:720px){
+    section{padding:48px 0}
+    .hero{padding:54px 0 46px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .card,.card:hover,.linkgrid a:hover{transition:none;transform:none}
+  }
+
+  /* ---------- in-page doc views ---------- */
+  .doc-page{display:none}
+  .doc-page.open{display:block}
+  .doc-body{max-width:760px;margin:0 auto;padding:40px 22px 90px}
+  .doc-back{margin-bottom:20px}
+  .doc-back a{color:var(--gold);font-weight:700;text-decoration:none;font-size:.92rem}
+  .doc-page .eyebrow{margin-bottom:14px}
+  .doc-body h1{font-size:clamp(1.7rem,4vw,2.2rem);margin-bottom:6px}
+  .doc-body h2{font-size:1.15rem;margin:30px 0 8px}
+  .doc-body p,.doc-body li{color:var(--ink);font-size:.97rem;line-height:1.75}
+  .doc-body ul,.doc-body ol{margin:8px 0 8px 22px}
+  .doc-body li{margin:6px 0}
+  .doc-body a{color:var(--navy);border-bottom:1px solid var(--gold);text-decoration:none}
+  .doc-body a:hover{color:var(--gold)}
+  .doc-body .updated,.doc-body .sub{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+  .doc-body .note{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 16px;color:var(--muted);font-size:.9rem;margin:22px 0}
+  .doc-body .note strong{color:var(--ink)}
+  .doc-body code{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:2px 7px;font-size:.88rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .doc-body .cta{display:inline-block;background:var(--navy);color:#fff;border:0;border-radius:10px;padding:12px 20px;text-decoration:none;font-weight:600;margin-top:6px}
+  .doc-body .cta:hover{background:var(--navy-deep);color:#fff}
+  .doc-foot{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font-size:.85rem;color:var(--muted)}
+  .doc-foot a{color:var(--navy);text-decoration:none;font-weight:600}
+  .doc-foot a:hover{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ShaCole Group Inc.",
+  "legalName": "ShaCole Group Inc.",
+  "description": "A private company operating client-focused brands — Wealth Within Reach® and TurnQi™ Ready.",
+  "url": "https://shacole.com",
+  "logo": "https://shacole.com/favicon-shacole.png",
+  "email": "support@shacolegroup.com",
+  "brand": [
+    {"@type": "Brand", "name": "Wealth Within Reach"},
+    {"@type": "Brand", "name": "TurnQi Ready"}
+  ]
+}
+</script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="mark">ShaCole<span>&reg;</span> Group Inc.</div>
-    <p class="tag">A private company operating client-focused brands.</p>
-  </header>
-  <main>
-    <div class="brands">
+<div id="top"></div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="ShaCole Group Inc. home">
+      <img src="/favicon-shacole.png" alt="" width="32" height="32">
+      <span class="mark">ShaCole<span class="reg">&reg;</span> Group Inc.</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#brands">Brands</a>
+      <a href="#app">The App</a>
+      <a href="#support">Support &amp; Legal</a>
+    </nav>
+    <a class="nav-cta" href="mailto:support@shacolegroup.com">Contact us</a>
+  </div>
+</header>
+
+<main id="site-main">
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Private company &middot; Client-focused brands</span>
+    <h1>The company behind <em>Wealth Within Reach&reg;</em> and <em>TurnQi&trade; Ready</em>.</h1>
+    <p class="lede">ShaCole&reg; Group Inc. is a private company operating client-focused brands — bringing clarity-first financial guidance and space-readiness services under one careful, quality-driven parent.</p>
+    <div class="markets">
+      <span>Wealth Within Reach&reg;</span>
+      <span>TurnQi&trade; Ready</span>
+      <span>&#127464;&#127462; Canada</span>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-gold" href="#brands">Explore the brands</a>
+      <a class="btn btn-ghost" href="#support">Support &amp; legal</a>
+    </div>
+  </div>
+</div>
+
+<div class="keyline" aria-hidden="true">
+  <img src="/favicon-shacole.png" alt="" width="42" height="42">
+</div>
+
+<!-- ============ THE COMPANY ============ -->
+<section class="niche">
+  <div class="wrap">
+    <span class="eyebrow">Who we are</span>
+    <h2>One parent company. Client-focused brands.</h2>
+    <p>ShaCole&reg; Group Inc. is a private company that builds and operates client-focused brands. <b>We put clients first</b> — pairing genuine care with disciplined operations so every brand under our roof delivers clarity, quality, and follow-through. Wealth Within Reach&reg; and TurnQi&trade; Ready are our two operating brands today, supported by the internal tools we build to run them well.</p>
+  </div>
+</section>
+
+<!-- ============ BRANDS ============ -->
+<section id="brands">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Our brands</h2>
+      <p>Two brands, one standard of care — each focused on helping people move forward with confidence.</p>
+    </div>
+    <div class="grid">
       <div class="card">
+        <div class="tick">&#9670;</div>
         <h3>Wealth Within Reach&reg;</h3>
         <p>Clarity-first financial guidance that helps people understand where they stand and what to do next.</p>
       </div>
       <div class="card">
+        <div class="tick">&#9670;</div>
         <h3>TurnQi&trade; Ready</h3>
         <p>Space preparation and turnover services that get homes and light commercial spaces ready for their next use.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <h2>Legal &amp; Support</h2>
-    <div class="links">
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Service</a>
-      <a href="/support">Support</a>
-      <a href="/help">Help</a>
+<!-- ============ THE APP ============ -->
+<section class="tinted" id="app">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The ShaCole&reg; App</h2>
+      <p>An internal Google Workspace add-on and Google Chat app used by authorized ShaCole&reg; Group Inc. staff to operate our client-relationship and operations workflows. It is a private tool — not a consumer product.</p>
     </div>
-  </main>
-  <footer>
-    &copy; <span id="y"></span> ShaCole&reg; Group Inc. &middot; <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>
-  </footer>
-</div>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+    <div class="linkgrid">
+      <a href="/help">Help &amp; Getting Started<span>Using the app inside Google Chat</span></a>
+      <a href="/setup">Set Up<span>A one-time setup for staff</span></a>
+      <a href="/admin">Administrator Guide<span>Managing the app for your team</span></a>
+      <a href="/support">Support<span>Reach us and common commands</span></a>
+      <a href="/report">Report an Issue<span>Tell us what isn&rsquo;t working</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUPPORT & LEGAL ============ -->
+<section id="support">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Support &amp; legal</h2>
+      <p>Policies and help for the ShaCole&reg; App. Questions? Email <a href="mailto:support@shacolegroup.com" style="color:var(--gold);font-weight:700;text-decoration:none">support@shacolegroup.com</a>.</p>
+    </div>
+    <div class="linkgrid">
+      <a href="/privacy">Privacy Policy<span>How the app handles information</span></a>
+      <a href="/terms">Terms of Service<span>Terms governing use of the app</span></a>
+      <a href="/support">Support<span>Get help from our team</span></a>
+      <a href="/help">Help<span>Everyday commands &amp; tips</span></a>
+      <a href="/setup">Set Up<span>Add &amp; authorize the app</span></a>
+      <a href="/admin">Administrator Guide<span>For Workspace admins</span></a>
+      <a href="/report">Report an Issue<span>Report a bug</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ DOC OVERLAYS ============ -->
+<section class="doc-page" id="view-privacy" aria-label="Privacy Policy">
+  <div class="doc-body">
+    <p class="doc-back"><a href="#" data-close>&larr; Back to site</a></p>
+    <span class="eyebrow">ShaCole&reg; App &mdash; Legal</span>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">For the ShaCole&reg; App &middot; Last updated: <span class="js-date"></span></p>
+
+    <div class="note">This policy describes how the <strong>ShaCole&reg; App</strong> (the &ldquo;App&rdquo;) handles information. The App is an internal Google Workspace add-on and Google Chat app used by authorized ShaCole&reg; Group Inc. staff to operate the company&rsquo;s client-relationship and operations workflows. It is not a consumer product and is not offered to the general public.</div>
+
+    <h2>Who we are</h2>
+    <p>The App is provided by <strong>ShaCole&reg; Group Inc.</strong> (&ldquo;ShaCole,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;), the company behind the Wealth Within Reach&reg; and TurnQi&trade; Ready brands. You can reach us at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+
+    <h2>What the App accesses</h2>
+    <p>When an authorized ShaCole Group user runs the App, it accesses only the Google Workspace data needed to perform the action requested. Depending on the feature used, this may include:</p>
+    <ul>
+      <li><strong>Google Sheets</strong> — to read and update the company&rsquo;s client-relationship records (the operational database).</li>
+      <li><strong>Gmail</strong> — to prepare and send client-facing messages from company mailboxes.</li>
+      <li><strong>Google Calendar</strong> — to schedule and manage client sessions and reminders.</li>
+      <li><strong>Google Contacts (People)</strong> — to maintain client and partner contact records.</li>
+      <li><strong>Google Drive &amp; Docs</strong> — to store and retrieve related records and backups.</li>
+      <li><strong>Google Tasks</strong> — to create follow-up items for staff.</li>
+      <li><strong>Google Chat</strong> — the interface through which staff interact with the App.</li>
+    </ul>
+
+    <h2>How we use information</h2>
+    <p>Information accessed through the App is used <strong>solely to provide the App&rsquo;s functionality</strong> to authorized ShaCole Group staff — for example, looking up a client record, sending a client email, booking a session, or generating an internal report. We do not use this information for advertising, and we do not sell it.</p>
+
+    <h2>Google API Services &mdash; Limited Use</h2>
+    <p>ShaCole&rsquo;s use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. We only request the scopes needed for the App&rsquo;s features, and we do not transfer Google user data to third parties except as necessary to provide the service, comply with applicable law, or protect against security threats.</p>
+
+    <h2>Sharing</h2>
+    <p>The App does not share Google Workspace data with outside parties. Data stays within ShaCole Group&rsquo;s own Google Workspace environment and is visible only to authorized staff. We may use Google Cloud services (as our infrastructure provider) to run the App.</p>
+
+    <h2>Data retention &amp; security</h2>
+    <p>The App reads and writes the company&rsquo;s own records; it does not maintain a separate long-term copy of your data beyond what is needed to operate (for example, short-lived processing state). Access is limited to authorized ShaCole Group accounts and is protected by Google Workspace&rsquo;s authentication and administrative controls. Administrators can revoke the App&rsquo;s access at any time.</p>
+
+    <h2>Your choices</h2>
+    <p>Because the App is an internal tool, access is managed by ShaCole Group administrators. Authorized users may stop using the App or request removal of the App from their account through their administrator.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy as the App evolves. Material changes will be reflected on this page with a revised &ldquo;last updated&rdquo; date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or the App&rsquo;s data handling: <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+
+    <div class="note">This is a starting draft prepared for internal use. Please review it (and, for anything binding, have it reviewed by qualified counsel) before relying on it.</div>
+
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="/terms">Terms</a> &middot; <a href="/support">Support</a></div>
+  </div>
+</section>
+
+<section class="doc-page" id="view-terms" aria-label="Terms of Service">
+  <div class="doc-body">
+    <p class="doc-back"><a href="#" data-close>&larr; Back to site</a></p>
+    <span class="eyebrow">ShaCole&reg; App &mdash; Legal</span>
+
+    <h1>Terms of Service</h1>
+    <p class="updated">For the ShaCole&reg; App &middot; Last updated: <span class="js-date"></span></p>
+
+    <div class="note">These terms govern use of the <strong>ShaCole&reg; App</strong> (the &ldquo;App&rdquo;), an internal Google Workspace add-on and Google Chat app provided by ShaCole&reg; Group Inc. for authorized staff and affiliates.</div>
+
+    <h2>1. Who may use the App</h2>
+    <p>The App is provided by <strong>ShaCole&reg; Group Inc.</strong> (&ldquo;ShaCole,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) for use by authorized personnel of ShaCole&reg; Group Inc. and its brands, Wealth Within Reach&reg; and TurnQi&trade; Ready. It is an internal operations tool and is not offered to the general public. Access is granted, managed, and revocable by ShaCole Group administrators.</p>
+
+    <h2>2. Acceptable use</h2>
+    <p>You agree to use the App only for legitimate ShaCole Group business purposes and in accordance with ShaCole Group&rsquo;s internal policies and applicable law. You agree not to misuse the App, attempt to access data you are not authorized to access, or use the App to send unsolicited or unlawful communications.</p>
+
+    <h2>3. Data</h2>
+    <p>The App accesses Google Workspace data as described in our <a href="/privacy">Privacy Policy</a>. By using the App you acknowledge that it reads and writes ShaCole Group&rsquo;s own records on your behalf to perform the actions you request.</p>
+
+    <h2>4. Availability &amp; changes</h2>
+    <p>We provide the App on a reasonable-efforts basis and may modify, suspend, or discontinue features at any time. We may update these terms as the App evolves; continued use after an update constitutes acceptance of the revised terms.</p>
+
+    <h2>5. No warranty</h2>
+    <p>The App is provided &ldquo;as is&rdquo; and &ldquo;as available,&rdquo; without warranties of any kind, whether express or implied, including but not limited to fitness for a particular purpose and non-infringement. We do not warrant that the App will be uninterrupted or error-free.</p>
+
+    <h2>6. Limitation of liability</h2>
+    <p>To the maximum extent permitted by law, ShaCole&reg; Group Inc. will not be liable for any indirect, incidental, special, consequential, or exemplary damages arising out of or relating to your use of the App.</p>
+
+    <h2>7. Governing law</h2>
+    <p>These terms are governed by the laws of the Province of Alberta and the federal laws of Canada applicable therein, without regard to conflict-of-laws principles.</p>
+
+    <h2>8. Contact</h2>
+    <p>Questions about these terms: <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+
+    <div class="note">This is a starting draft prepared for internal use. Please review it (and, for anything binding, have it reviewed by qualified counsel) before relying on it.</div>
+
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="/privacy">Privacy</a> &middot; <a href="/support">Support</a></div>
+  </div>
+</section>
+
+<section class="doc-page" id="view-support" aria-label="Support">
+  <div class="doc-body">
+    <p class="doc-back"><a href="#" data-close>&larr; Back to site</a></p>
+    <span class="eyebrow">ShaCole&reg; App</span>
+
+    <h1>Support</h1>
+    <p class="sub">Help with the ShaCole&reg; App for ShaCole Group staff.</p>
+
+    <h2>Contact us</h2>
+    <p>The fastest way to reach us is by email. We aim to respond within one business day.</p>
+    <p><a class="cta" href="mailto:support@shacolegroup.com">Email support@shacolegroup.com</a></p>
+
+    <h2>What the App does</h2>
+    <p>ShaCole&reg; App is an internal Google Chat app that lets authorized staff look up clients, view their status, and run quick reports over the company&rsquo;s records &mdash; without needing direct access to the underlying spreadsheet.</p>
+
+    <h2>Common commands</h2>
+    <ul>
+      <li><code>/lookup &lt;name or ID&gt;</code> — pull up a client card.</li>
+      <li><code>/report</code> — an at-a-glance business overview.</li>
+      <li><code>/help</code> — list the available commands inside Chat.</li>
+    </ul>
+
+    <h2>Getting the App</h2>
+    <p>ShaCole&reg; App is a private application available only to ShaCole&reg; Group Inc. staff. If you need access, contact your administrator at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></div>
+  </div>
+</section>
+
+<section class="doc-page" id="view-setup" aria-label="Set Up">
+  <div class="doc-body">
+    <p class="doc-back"><a href="#" data-close>&larr; Back to site</a></p>
+    <span class="eyebrow">ShaCole&reg; App</span>
+
+    <h1>Setting up ShaCole&reg; App</h1>
+    <p class="sub">A one-time setup for authorized ShaCole Group staff.</p>
+
+    <h2>1. Add ShaCole&reg; App in Google Chat</h2>
+    <ol>
+      <li>Open <strong>Google Chat</strong> with your ShaCole Group account.</li>
+      <li>Start a new direct message and search for <strong>ShaCole&reg; App</strong>.</li>
+      <li>Select the app and confirm <strong>Add</strong> / <strong>Install</strong>.</li>
+    </ol>
+
+    <h2>2. Authorize the app</h2>
+    <p>The first time you message ShaCole&reg; App, Google will ask you to <strong>authorize</strong> it for your account. Review the requested access and approve it. This is a one-time step per user. See our <a href="/privacy">Privacy Policy</a> for what the app accesses and why.</p>
+
+    <h2>3. Run your first command</h2>
+    <ol>
+      <li>Type <code>/lookup &lt;client name or Deal ID&gt;</code> and send.</li>
+      <li>ShaCole&reg; App returns a client card with status and quick actions.</li>
+      <li>Type <code>/help</code> any time to see all commands.</li>
+    </ol>
+
+    <h2>Need access?</h2>
+    <p>ShaCole&reg; App is a private application for ShaCole&reg; Group Inc. staff. If you can&rsquo;t find it or need to be granted access, contact your administrator at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="/help">Help</a> &middot; <a href="/support">Support</a> &middot; <a href="/privacy">Privacy</a></div>
+  </div>
+</section>
+
+<section class="doc-page" id="view-admin" aria-label="Administrator Guide">
+  <div class="doc-body">
+    <p class="doc-back"><a href="#" data-close>&larr; Back to site</a></p>
+    <span class="eyebrow">ShaCole&reg; App</span>
+
+    <h1>Administrator Guide</h1>
+    <p class="sub">Managing ShaCole&reg; App for ShaCole&reg; Group Inc.</p>
+
+    <div class="note">ShaCole&reg; App is a <strong>private</strong> Google Workspace application, available only within ShaCole&reg; Group Inc. It is not offered to the public and cannot be installed by users outside the organization.</div>
+
+    <h2>Installing the app for your team</h2>
+    <p>A ShaCole Group Workspace administrator manages availability from the <strong>Google Admin console</strong>:</p>
+    <ol>
+      <li>Go to <strong>Apps &rarr; Google Workspace Marketplace apps</strong>.</li>
+      <li>Locate <strong>ShaCole&reg; App</strong> and choose who can install it &mdash; the whole organization, or specific organizational units or groups.</li>
+      <li>Team members can then add ShaCole&reg; App in Google Chat and authorize it for their own account.</li>
+    </ol>
+
+    <h2>Access &amp; scopes</h2>
+    <p>The app requests only the Google Workspace scopes it needs to function (Sheets, Gmail, Calendar, Contacts, Drive, Tasks, and Chat). See the <a href="/privacy">Privacy Policy</a> for details. Each user authorizes the app once for their own account.</p>
+
+    <h2>Revoking access</h2>
+    <p>Administrators can remove or restrict the app at any time from the Admin console, and individual users can be removed from the allowed audience. Removing the app immediately ends its access to Workspace data.</p>
+
+    <h2>Questions</h2>
+    <p>Administrator questions: <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="/support">Support</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></div>
+  </div>
+</section>
+
+<section class="doc-page" id="view-help" aria-label="Help &amp; Getting Started">
+  <div class="doc-body">
+    <p class="doc-back"><a href="#" data-close>&larr; Back to site</a></p>
+    <span class="eyebrow">ShaCole&reg; App</span>
+
+    <h1>Help &amp; Getting Started</h1>
+    <p class="sub">Using the ShaCole&reg; App inside Google Chat.</p>
+
+    <h2>Start a chat with ShaCole&reg; App</h2>
+    <ol>
+      <li>Open <strong>Google Chat</strong> and start a new direct message.</li>
+      <li>Search for <strong>ShaCole&reg; App</strong> and select the app.</li>
+      <li>The first time, you&rsquo;ll be asked to <strong>authorize</strong> the app for your account &mdash; approve it to continue.</li>
+    </ol>
+
+    <h2>Everyday commands</h2>
+    <ol>
+      <li><code>/lookup &lt;name or ID&gt;</code> — returns a client card with status, contact details, and quick actions.</li>
+      <li><code>/report</code> — a business overview and referral snapshot.</li>
+      <li><code>/help</code> — shows the current list of commands in Chat.</li>
+    </ol>
+
+    <h2>Tips</h2>
+    <ul>
+      <li>You can look up by a client&rsquo;s name or by their Deal ID.</li>
+      <li>Card buttons run as you; some actions may be routed for review depending on your role.</li>
+    </ul>
+
+    <h2>Need a hand?</h2>
+    <p>Contact <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a> and we&rsquo;ll help you out.</p>
+
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/support">Support</a></div>
+  </div>
+</section>
+
+<section class="doc-page" id="view-report" aria-label="Report an Issue">
+  <div class="doc-body">
+    <p class="doc-back"><a href="#" data-close>&larr; Back to site</a></p>
+    <span class="eyebrow">ShaCole&reg; App</span>
+
+    <h1>Report an Issue</h1>
+    <p class="sub">Something not working right in ShaCole&reg; App? Let us know.</p>
+
+    <h2>Email us the details</h2>
+    <p>Send a note to our team and we&rsquo;ll look into it &mdash; usually within one business day.</p>
+    <p><a class="cta" href="mailto:support@shacolegroup.com?subject=ShaCole%C2%AE%20app%20issue">Report an issue by email</a></p>
+
+    <h2>What to include</h2>
+    <p>To help us resolve it quickly, please include:</p>
+    <ul>
+      <li>What you were trying to do (e.g. the command you ran, such as <em>/lookup</em>).</li>
+      <li>What happened instead, and the exact wording of any error.</li>
+      <li>Roughly when it happened.</li>
+      <li>A screenshot, if you have one.</li>
+    </ul>
+
+    <p>Please don&rsquo;t include passwords or sensitive personal information in your report.</p>
+
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="/support">Support</a> &middot; <a href="/help">Help</a> &middot; <a href="/privacy">Privacy</a></div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-lockup">
+          <img src="/favicon-shacole.png" alt="" width="34" height="34">
+          <span class="foot-mark">ShaCole<span class="reg">&reg;</span> Group Inc.</span>
+        </div>
+        <p class="foot-tag" style="margin-top:12px">A private company operating client-focused brands.</p>
+      </div>
+      <div>
+        <p class="foot-tag" style="text-align:right">The company behind Wealth Within Reach&reg;<br>and TurnQi&trade; Ready.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a></span>
+      <span class="foot-links">
+        <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp;
+        <a href="/terms">Terms</a> &nbsp;&middot;&nbsp;
+        <a href="/support">Support</a> &nbsp;&middot;&nbsp;
+        <a href="/help">Help</a> &nbsp;&middot;&nbsp;
+        <a href="/setup">Set Up</a> &nbsp;&middot;&nbsp;
+        <a href="/admin">Admin</a> &nbsp;&middot;&nbsp;
+        <a href="/report">Report an Issue</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // Route → overlay id map. These paths are 200-rewritten to index.html by Cloudflare _redirects,
+  // so location.pathname reflects the clean URL even though index.html is served.
+  var ROUTES = {
+    "/privacy": "view-privacy",
+    "/terms":   "view-terms",
+    "/support": "view-support",
+    "/setup":   "view-setup",
+    "/admin":   "view-admin",
+    "/help":    "view-help",
+    "/report":  "view-report"
+  };
+
+  var main   = document.getElementById("site-main");
+  var footer = document.getElementById("site-footer");
+
+  function normalize(path){
+    if(!path) return "/";
+    if(path.length > 1 && path.charAt(path.length - 1) === "/") path = path.slice(0, -1);
+    return path || "/";
+  }
+
+  function scrollTop(){ window.scrollTo(0, 0); }
+
+  function openView(id){
+    var v = document.getElementById(id);
+    if(!v) return false;
+    document.querySelectorAll(".doc-page.open").forEach(function(o){ o.classList.remove("open"); });
+    main.style.display = "none";
+    footer.style.display = "none";
+    v.classList.add("open");
+    scrollTop();
+    return true;
+  }
+
+  function closeView(){
+    document.querySelectorAll(".doc-page.open").forEach(function(o){ o.classList.remove("open"); });
+    main.style.display = "";
+    footer.style.display = "";
+  }
+
+  // Reflect the current URL into the view (no history push).
+  function syncFromLocation(){
+    var id = ROUTES[normalize(location.pathname)];
+    if(id){ openView(id); }
+    else { closeView(); }
+  }
+
+  // ON LOAD: if we landed on a doc route, open it immediately.
+  syncFromLocation();
+
+  // Browser back / forward.
+  window.addEventListener("popstate", syncFromLocation);
+
+  // Delegated click handling for all links.
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("a");
+    if(!a) return;
+
+    // "← Back to site" and any data-close element.
+    if(a.hasAttribute("data-close")){
+      e.preventDefault();
+      history.pushState({}, "", "/");
+      closeView();
+      scrollTop();
+      return;
+    }
+
+    var href = a.getAttribute("href");
+    if(href == null) return;
+
+    // Internal route links (clean URLs like /privacy) → SPA transition.
+    if(href.charAt(0) === "/"){
+      var path = normalize(href.split("#")[0].split("?")[0]);
+      if(ROUTES[path]){
+        e.preventDefault();
+        history.pushState({ view: ROUTES[path] }, "", path);
+        openView(ROUTES[path]);
+        return;
+      }
+      if(path === "/"){
+        e.preventDefault();
+        history.pushState({}, "", "/");
+        closeView();
+        scrollTop();
+        return;
+      }
+      // any other absolute path: let the browser handle it normally.
+      return;
+    }
+
+    // In-page hash anchors.
+    if(href.charAt(0) === "#"){
+      e.preventDefault();
+      var overlayOpen = !!document.querySelector(".doc-page.open");
+      if(overlayOpen){
+        history.pushState({}, "", "/");
+        closeView();
+      }
+      if(href === "#" || href === "#top"){
+        scrollTop();
+        return;
+      }
+      var target = document.querySelector(href);
+      if(target){
+        requestAnimationFrame(function(){
+          requestAnimationFrame(function(){
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+      }
+      return;
+    }
+    // mailto:, external http(s), etc. → default behavior.
+  });
+
+  // Populate current year and "last updated" date placeholders.
+  var now = new Date();
+  var year = String(now.getFullYear());
+  var dateStr = now.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" });
+  document.querySelectorAll(".js-year").forEach(function(el){ el.textContent = year; });
+  document.querySelectorAll(".js-date").forEach(function(el){ el.textContent = dateStr; });
+})();
+</script>
 </body>
 </html>

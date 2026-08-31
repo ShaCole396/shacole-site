@@ -3,33 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShaCole&reg; Group Inc.</title>
-<meta name="description" content="ShaCole Group Inc. — the private company behind Wealth Within Reach® and TurnQi™ Ready.">
+<title>ShaCole Group Inc.</title>
+<meta name="description" content="ShaCole Group Inc. — the private company behind Wealth Within Reach® and TurnQi Ready™.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ShaCole® Group Inc.">
-<meta property="og:description" content="The company behind Wealth Within Reach® and TurnQi™ Ready.">
+<meta property="og:title" content="ShaCole Group Inc.">
+<meta property="og:description" content="The company behind Wealth Within Reach® and TurnQi Ready™.">
 <link rel="icon" type="image/png" href="/favicon-shacole.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0D1321;
-    --navy-deep:#080b13;
-    --ink:#1b2230;
-    --gold:#C89B3C;
-    --gold-soft:#e8d9b8;
-    --paper:#FFFAFA;
-    --mist:#f5f2ea;
+    /* ShaCole Group Inc. — Indigo & Emerald (Brand Board; distinct from WWR cyan + TurnQi navy/gold) */
+    --navy:#1E1545;         /* Indigo · primary + ink */
+    --navy-deep:#140d30;    /* darker indigo — hovers */
+    --indigo-mid:#3A2E6E;   /* Indigo · mid */
+    --ink:#241a4a;          /* indigo-tinted body ink */
+    --gold:#047832;         /* Emerald · accent (the "gold" slot) */
+    --gold-soft:#b9e2c8;    /* soft emerald */
+    --paper:#FBFAFE;        /* near-white */
+    --mist:#F0EEF8;         /* light indigo tint — sections */
     --white:#ffffff;
-    --line:#e7e3da;
-    --muted:#5b6472;
-    --body-grey:#5b6472;
+    --line:#DED9EC;         /* light indigo hairline */
+    --muted:#6a6386;
+    --body-grey:#5f5878;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:'Fraunces',Georgia,"Times New Roman",serif;line-height:1.18;color:var(--navy)}
+  body{font-family:'Sora',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Jost',-apple-system,Arial,sans-serif;line-height:1.18;color:var(--navy)}
   .tm{font-size:.55em;vertical-align:top;position:relative;top:-.1em;letter-spacing:0}
   img,svg{display:block}
   a{color:inherit}
@@ -37,11 +39,11 @@
   .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
 
   /* ---------- header ---------- */
-  header{position:sticky;top:0;background:rgba(255,250,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+  header{position:sticky;top:0;background:rgba(251,250,254,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
   .nav .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
   .nav .logo img{height:32px;width:32px}
-  .mark{font-family:'Fraunces',Georgia,"Times New Roman",serif;font-weight:600;font-size:1.28rem;letter-spacing:.3px;color:var(--navy);line-height:1}
+  .mark{font-family:'Jost',-apple-system,Arial,sans-serif;font-weight:600;font-size:1.28rem;letter-spacing:.3px;color:var(--navy);line-height:1}
   .mark .reg{color:var(--gold);font-size:.5em;vertical-align:.55em;font-weight:700}
   .nav-links{display:flex;align-items:center;gap:22px}
   .nav-links a{text-decoration:none;font-size:.9rem;font-weight:600;color:var(--navy)}
@@ -51,13 +53,14 @@
 
   /* ---------- hero ---------- */
   .hero{padding:76px 0 60px;background:
-    radial-gradient(1100px 480px at 85% -10%, rgba(200,155,60,.12), transparent 60%),
+    radial-gradient(1100px 480px at 85% -10%, rgba(4,120,50,.10), transparent 60%),
     linear-gradient(180deg,var(--paper) 0%, #fffdfb 100%)}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
   .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
   .hero h1{font-size:clamp(2.1rem,5.4vw,3.3rem);font-weight:600;max-width:18ch}
   .hero h1 em{font-style:normal;color:var(--gold)}
-  .hero p.lede{margin:22px 0 8px;font-size:1.12rem;color:var(--body-grey);max-width:58ch}
+  .hero .brand-tag{margin:16px 0 2px;font-family:'Jost',-apple-system,Arial,sans-serif;font-weight:500;font-size:clamp(1.15rem,2.2vw,1.4rem);color:var(--indigo-mid)}
+  .hero p.lede{margin:14px 0 8px;font-size:1.12rem;color:var(--body-grey);max-width:58ch}
   .hero .markets{margin:24px 0 30px;display:flex;flex-wrap:wrap;gap:10px}
   .markets span{font-size:.82rem;font-weight:600;color:var(--navy);background:var(--white);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
   .btn-row{display:flex;flex-wrap:wrap;gap:12px}
@@ -91,7 +94,7 @@
   .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(13,19,33,.07)}
   .card h3{font-size:1.12rem;font-weight:600;margin-bottom:8px}
   .card p{font-size:.94rem;color:var(--body-grey)}
-  .card .tick{width:32px;height:32px;border-radius:9px;background:rgba(200,155,60,.16);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--gold);font-weight:800;font-size:1.05rem}
+  .card .tick{width:32px;height:32px;border-radius:9px;background:rgba(4,120,50,.14);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--gold);font-weight:800;font-size:1.05rem}
 
   /* link grid */
   .linkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
@@ -104,7 +107,7 @@
   .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px;align-items:flex-start}
   .foot-lockup{display:flex;align-items:center;gap:11px}
   .foot-lockup img{height:34px;width:34px}
-  .foot-mark{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.3rem;color:#fff;line-height:1}
+  .foot-mark{font-family:'Jost',-apple-system,Arial,sans-serif;font-weight:600;font-size:1.3rem;color:#fff;line-height:1}
   .foot-mark .reg{color:var(--gold);font-size:.5em;vertical-align:.55em;font-weight:700}
   .foot-tag{font-size:.9rem;max-width:34ch;color:#c3cad4}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:22px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:.82rem}
@@ -155,7 +158,7 @@
   "@type": "Organization",
   "name": "ShaCole Group Inc.",
   "legalName": "ShaCole Group Inc.",
-  "description": "A private company operating client-focused brands — Wealth Within Reach® and TurnQi™ Ready.",
+  "description": "A private company operating client-focused brands — Wealth Within Reach® and TurnQi Ready™.",
   "url": "https://shacole.com",
   "logo": "https://shacole.com/favicon-shacole.png",
   "email": "support@shacolegroup.com",
@@ -174,7 +177,7 @@
   <div class="wrap nav">
     <a class="logo" href="/" aria-label="ShaCole Group Inc. home">
       <img src="/favicon-shacole.png" alt="" width="32" height="32">
-      <span class="mark">ShaCole<span class="reg">&reg;</span> Group Inc.</span>
+      <span class="mark">ShaCole Group Inc.</span>
     </a>
     <nav class="nav-links">
       <a href="#brands">Brands</a>
@@ -190,12 +193,13 @@
 <!-- ============ HERO ============ -->
 <div class="hero">
   <div class="wrap">
-    <span class="eyebrow">Private company &middot; Client-focused brands</span>
-    <h1>The company behind <em>Wealth Within Reach&reg;</em> and <em>TurnQi&trade; Ready</em>.</h1>
-    <p class="lede">ShaCole&reg; Group Inc. is a private company operating client-focused brands — bringing clarity-first financial guidance and space-readiness services under one careful, quality-driven parent.</p>
+    <span class="eyebrow">Parent &middot; Operator</span>
+    <h1>The company behind <em>Wealth Within Reach&reg;</em> and <em>TurnQi Ready&trade;</em>.</h1>
+    <p class="brand-tag">Steady, straightforward, and on your side.</p>
+    <p class="lede">ShaCole Group Inc. is a private company operating client-focused brands — bringing clarity-first financial guidance and space-readiness services under one careful, quality-driven parent.</p>
     <div class="markets">
       <span>Wealth Within Reach&reg;</span>
-      <span>TurnQi&trade; Ready</span>
+      <span>TurnQi Ready&trade;</span>
       <span>&#127464;&#127462; Canada</span>
     </div>
     <div class="btn-row">
@@ -214,7 +218,7 @@
   <div class="wrap">
     <span class="eyebrow">Who we are</span>
     <h2>One parent company. Client-focused brands.</h2>
-    <p>ShaCole&reg; Group Inc. is a private company that builds and operates client-focused brands. <b>We put clients first</b> — pairing genuine care with disciplined operations so every brand under our roof delivers clarity, quality, and follow-through. Wealth Within Reach&reg; and TurnQi&trade; Ready are our two operating brands today, supported by the internal tools we build to run them well.</p>
+    <p>ShaCole Group Inc. is a private company that builds and operates client-focused brands. <b>We put clients first</b> — pairing genuine care with disciplined operations so every brand under our roof delivers clarity, quality, and follow-through. Wealth Within Reach&reg; and TurnQi Ready&trade; are our two operating brands today, supported by the internal tools we build to run them well.</p>
   </div>
 </section>
 
@@ -233,7 +237,7 @@
       </div>
       <div class="card">
         <div class="tick">&#9670;</div>
-        <h3>TurnQi&trade; Ready</h3>
+        <h3>TurnQi Ready&trade;</h3>
         <p>Space preparation and turnover services that get homes and light commercial spaces ready for their next use.</p>
       </div>
     </div>
@@ -245,7 +249,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2>The ShaCole&reg; App</h2>
-      <p>An internal Google Workspace add-on and Google Chat app used by authorized ShaCole&reg; Group Inc. staff to operate our client-relationship and operations workflows. It is a private tool — not a consumer product.</p>
+      <p>An internal Google Workspace add-on and Google Chat app used by authorized ShaCole Group Inc. staff to operate our client-relationship and operations workflows. It is a private tool — not a consumer product.</p>
     </div>
     <div class="linkgrid">
       <a href="#help">Help &amp; Getting Started<span>Using the app inside Google Chat</span></a>
@@ -287,10 +291,10 @@
     <h1>Privacy Policy</h1>
     <p class="updated">For the ShaCole&reg; App &middot; Last updated: <span class="js-date"></span></p>
 
-    <div class="note">This policy describes how the <strong>ShaCole&reg; App</strong> (the &ldquo;App&rdquo;) handles information. The App is an internal Google Workspace add-on and Google Chat app used by authorized ShaCole&reg; Group Inc. staff to operate the company&rsquo;s client-relationship and operations workflows. It is not a consumer product and is not offered to the general public.</div>
+    <div class="note">This policy describes how the <strong>ShaCole&reg; App</strong> (the &ldquo;App&rdquo;) handles information. The App is an internal Google Workspace add-on and Google Chat app used by authorized ShaCole Group Inc. staff to operate the company&rsquo;s client-relationship and operations workflows. It is not a consumer product and is not offered to the general public.</div>
 
     <h2>Who we are</h2>
-    <p>The App is provided by <strong>ShaCole&reg; Group Inc.</strong> (&ldquo;ShaCole,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;), the company behind the Wealth Within Reach&reg; and TurnQi&trade; Ready brands. You can reach us at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+    <p>The App is provided by <strong>ShaCole Group Inc.</strong> (&ldquo;ShaCole,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;), the company behind the Wealth Within Reach&reg; and TurnQi Ready&trade; brands. You can reach us at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
 
     <h2>What the App accesses</h2>
     <p>When an authorized ShaCole Group user runs the App, it accesses only the Google Workspace data needed to perform the action requested. Depending on the feature used, this may include:</p>
@@ -327,7 +331,7 @@
 
     <div class="note">This is a starting draft prepared for internal use. Please review it (and, for anything binding, have it reviewed by qualified counsel) before relying on it.</div>
 
-    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="#terms">Terms</a> &middot; <a href="#support">Support</a></div>
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="#terms">Terms</a> &middot; <a href="#support">Support</a></div>
   </div>
 </section>
 
@@ -339,10 +343,10 @@
     <h1>Terms of Service</h1>
     <p class="updated">For the ShaCole&reg; App &middot; Last updated: <span class="js-date"></span></p>
 
-    <div class="note">These terms govern use of the <strong>ShaCole&reg; App</strong> (the &ldquo;App&rdquo;), an internal Google Workspace add-on and Google Chat app provided by ShaCole&reg; Group Inc. for authorized staff and affiliates.</div>
+    <div class="note">These terms govern use of the <strong>ShaCole&reg; App</strong> (the &ldquo;App&rdquo;), an internal Google Workspace add-on and Google Chat app provided by ShaCole Group Inc. for authorized staff and affiliates.</div>
 
     <h2>1. Who may use the App</h2>
-    <p>The App is provided by <strong>ShaCole&reg; Group Inc.</strong> (&ldquo;ShaCole,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) for use by authorized personnel of ShaCole&reg; Group Inc. and its brands, Wealth Within Reach&reg; and TurnQi&trade; Ready. It is an internal operations tool and is not offered to the general public. Access is granted, managed, and revocable by ShaCole Group administrators.</p>
+    <p>The App is provided by <strong>ShaCole Group Inc.</strong> (&ldquo;ShaCole,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) for use by authorized personnel of ShaCole Group Inc. and its brands, Wealth Within Reach&reg; and TurnQi Ready&trade;. It is an internal operations tool and is not offered to the general public. Access is granted, managed, and revocable by ShaCole Group administrators.</p>
 
     <h2>2. Acceptable use</h2>
     <p>You agree to use the App only for legitimate ShaCole Group business purposes and in accordance with ShaCole Group&rsquo;s internal policies and applicable law. You agree not to misuse the App, attempt to access data you are not authorized to access, or use the App to send unsolicited or unlawful communications.</p>
@@ -357,7 +361,7 @@
     <p>The App is provided &ldquo;as is&rdquo; and &ldquo;as available,&rdquo; without warranties of any kind, whether express or implied, including but not limited to fitness for a particular purpose and non-infringement. We do not warrant that the App will be uninterrupted or error-free.</p>
 
     <h2>6. Limitation of liability</h2>
-    <p>To the maximum extent permitted by law, ShaCole&reg; Group Inc. will not be liable for any indirect, incidental, special, consequential, or exemplary damages arising out of or relating to your use of the App.</p>
+    <p>To the maximum extent permitted by law, ShaCole Group Inc. will not be liable for any indirect, incidental, special, consequential, or exemplary damages arising out of or relating to your use of the App.</p>
 
     <h2>7. Governing law</h2>
     <p>These terms are governed by the laws of the Province of Alberta and the federal laws of Canada applicable therein, without regard to conflict-of-laws principles.</p>
@@ -367,7 +371,7 @@
 
     <div class="note">This is a starting draft prepared for internal use. Please review it (and, for anything binding, have it reviewed by qualified counsel) before relying on it.</div>
 
-    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#support">Support</a></div>
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#support">Support</a></div>
   </div>
 </section>
 
@@ -394,9 +398,9 @@
     </ul>
 
     <h2>Getting the App</h2>
-    <p>ShaCole&reg; App is a private application available only to ShaCole&reg; Group Inc. staff. If you need access, contact your administrator at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+    <p>ShaCole&reg; App is a private application available only to ShaCole Group Inc. staff. If you need access, contact your administrator at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
 
-    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></div>
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></div>
   </div>
 </section>
 
@@ -426,9 +430,9 @@
     </ol>
 
     <h2>Need access?</h2>
-    <p>ShaCole&reg; App is a private application for ShaCole&reg; Group Inc. staff. If you can&rsquo;t find it or need to be granted access, contact your administrator at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
+    <p>ShaCole&reg; App is a private application for ShaCole Group Inc. staff. If you can&rsquo;t find it or need to be granted access, contact your administrator at <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
 
-    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="#help">Help</a> &middot; <a href="#support">Support</a> &middot; <a href="#privacy">Privacy</a></div>
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="#help">Help</a> &middot; <a href="#support">Support</a> &middot; <a href="#privacy">Privacy</a></div>
   </div>
 </section>
 
@@ -438,9 +442,9 @@
     <span class="eyebrow">ShaCole&reg; App</span>
 
     <h1>Administrator Guide</h1>
-    <p class="sub">Managing ShaCole&reg; App for ShaCole&reg; Group Inc.</p>
+    <p class="sub">Managing ShaCole&reg; App for ShaCole Group Inc.</p>
 
-    <div class="note">ShaCole&reg; App is a <strong>private</strong> Google Workspace application, available only within ShaCole&reg; Group Inc. It is not offered to the public and cannot be installed by users outside the organization.</div>
+    <div class="note">ShaCole&reg; App is a <strong>private</strong> Google Workspace application, available only within ShaCole Group Inc. It is not offered to the public and cannot be installed by users outside the organization.</div>
 
     <h2>Installing the app for your team</h2>
     <p>A ShaCole Group Workspace administrator manages availability from the <strong>Google Admin console</strong>:</p>
@@ -459,7 +463,7 @@
     <h2>Questions</h2>
     <p>Administrator questions: <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a>.</p>
 
-    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="#support">Support</a> &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></div>
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="#support">Support</a> &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></div>
   </div>
 </section>
 
@@ -494,7 +498,7 @@
     <h2>Need a hand?</h2>
     <p>Contact <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a> and we&rsquo;ll help you out.</p>
 
-    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a> &middot; <a href="#support">Support</a></div>
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a> &middot; <a href="#support">Support</a></div>
   </div>
 </section>
 
@@ -521,7 +525,7 @@
 
     <p>Please don&rsquo;t include passwords or sensitive personal information in your report.</p>
 
-    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="#support">Support</a> &middot; <a href="#help">Help</a> &middot; <a href="#privacy">Privacy</a></div>
+    <div class="doc-foot">&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="#support">Support</a> &middot; <a href="#help">Help</a> &middot; <a href="#privacy">Privacy</a></div>
   </div>
 </section>
 
@@ -532,16 +536,16 @@
       <div>
         <div class="foot-lockup">
           <img src="/favicon-shacole.png" alt="" width="34" height="34">
-          <span class="foot-mark">ShaCole<span class="reg">&reg;</span> Group Inc.</span>
+          <span class="foot-mark">ShaCole Group Inc.</span>
         </div>
         <p class="foot-tag" style="margin-top:12px">A private company operating client-focused brands.</p>
       </div>
       <div>
-        <p class="foot-tag" style="text-align:right">The company behind Wealth Within Reach&reg;<br>and TurnQi&trade; Ready.</p>
+        <p class="foot-tag" style="text-align:right">The company behind Wealth Within Reach&reg;<br>and TurnQi Ready&trade;.</p>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; <span class="js-year"></span> ShaCole&reg; Group Inc. &middot; <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a></span>
+      <span>&copy; <span class="js-year"></span> ShaCole Group Inc. &middot; <a href="mailto:support@shacolegroup.com">support@shacolegroup.com</a></span>
       <span class="foot-links">
         <a href="#privacy">Privacy</a> &nbsp;&middot;&nbsp;
         <a href="#terms">Terms</a> &nbsp;&middot;&nbsp;
